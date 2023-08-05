@@ -1,0 +1,10 @@
+{
+    "files.associations": {
+        "*.v": "diff",
+        "*.ne": "csharp",
+        "*.nex": "jsonc",
+        "*.json": "jsonc",
+        "*.data": "jsonc",
+        "*.asm": "nasm"
+    }
+}
