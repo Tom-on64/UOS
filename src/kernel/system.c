@@ -1,6 +1,5 @@
 #include "system.h"
 
-/* You will need to code these up yourself!  */
 extern unsigned char *memcpy(unsigned char *dest, const unsigned char *src, int count)
 {
     const char *sp = (const char *)src;
@@ -34,7 +33,7 @@ extern int strlen(const char *str)
     return retval;
 }
 
-unsigned char inportb(unsigned short _port)
+extern unsigned char inportb(unsigned short _port)
 {
     unsigned char rv;
     __asm__ __volatile__("inb %1, %0"
@@ -43,13 +42,9 @@ unsigned char inportb(unsigned short _port)
     return rv;
 }
 
-void outportb(unsigned short _port, unsigned char _data)
+extern void outportb(unsigned short _port, unsigned char _data)
 {
     __asm__ __volatile__("outb %1, %0"
                          :
                          : "dN"(_port), "a"(_data));
-}
-
-void puts(char[])
-{
 }
